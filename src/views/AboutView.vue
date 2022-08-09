@@ -2,21 +2,25 @@
   <div>
     <h2>Vue3的声明周期</h2>
     <!-- 声明周期 -->
-    <div id="dom">{{data.msg}}</div>
+    <div id="dom">{{ data.msg }}</div>
     <!-- 事件 -->
     <button @click="greet">click me</button>
     <hr>
     <!-- 双向绑定 -->
     <input type="text" placeholder="请输入" v-model="data.userName">
     <textarea placeholder="请输入" cols="30" rows="10" v-model="data.userInput"></textarea>
-    <p>{{data.userName}}</p>
-    <p>{{data.userInput}}</p>
+    <p>{{ data.userName }}</p>
+    <p>{{ data.userInput }}</p>
     <button @click="submit">提交</button>
+
+    <br>
+    <router-link to="/childRoute">ChildRoute</router-link>
+    <router-view/>
   </div>
 </template>
 
 <script setup>
-import {onMounted, onBeforeMount,ref} from 'vue';
+import {onBeforeMount, onMounted, ref} from 'vue';
 
 const data = ref({
   msg: "你好",
