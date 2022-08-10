@@ -18,6 +18,12 @@ const routes = [
         component: () => import("../views/pages/userList")
       }
     ]
+  },
+  // 登陆页面
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import("../views/pages/loginPage.vue")
   }
 ]
 
