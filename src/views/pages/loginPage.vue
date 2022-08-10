@@ -36,24 +36,40 @@
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
-            <el-button @click="addDomain">New domain</el-button>
+            <el-button @click="handleAdd">触发</el-button>
           </el-form-item>
         </el-form>
       </el-form>
+      <p>{{ data.num }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
 import {ref} from 'vue';
+import {useStore} from 'vuex'
+
+const store = useStore();
+const count = store.state.count;
 
 // eslint-disable-next-line no-unused-vars
 const data = ref({
   loginData: {
     username: '',
     password: ''
-  }
+  },
+  num: count
 })
+
+function handleAdd() {
+  // store.commit("setCount", 100)
+  store.dispatch('setCountPromise', 100).then(() => {
+    alert("修改成功")
+  }).catch(err => {
+    alert(err)
+  })
+  alert(store.state.count)
+}
 </script>
 
 <style scoped>
