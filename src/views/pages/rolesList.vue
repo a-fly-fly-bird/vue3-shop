@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>一整个子路由测试</p>
+    <p>角色列表</p>
   </div>
 </template>
 

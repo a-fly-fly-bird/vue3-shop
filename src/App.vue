@@ -1,12 +1,8 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/about">About</router-link>
-    |
-    <router-link to="/layout">Layout</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <!--  <router-link :to="{ name: 'layout' }">layout</router-link>-->
+    <router-view></router-view>
+  </div>
 </template>
 
 <style>
@@ -29,5 +25,17 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+/* flex 布局类名 */
+.flex-float {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
 </style>
