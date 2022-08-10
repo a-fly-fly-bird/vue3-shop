@@ -22,7 +22,7 @@
             <el-sub-menu index="1">
               <template #title>
                 <el-icon>
-                  <location/>
+                  <Avatar/>
                 </el-icon>
                 <span>账号管理</span>
               </template>
@@ -33,7 +33,7 @@
             <el-sub-menu index="2">
               <template #title>
                 <el-icon>
-                  <location/>
+                  <Connection/>
                 </el-icon>
                 <span>角色管理</span>
               </template>
