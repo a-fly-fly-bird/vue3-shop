@@ -21,6 +21,23 @@ const routes = [
         component: () => import('../views/ChildRoute.vue')
       }
     ]
+  },
+  {
+    path: '/layout',
+    name: 'layout',
+    component: () => import('../views/LayOut.vue'),
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: HomeView
+      },
+      {
+        path: '/about',
+        name: 'about',
+        component: () => import('../views/AboutView.vue')
+      }
+    ]
   }
 ]
 
